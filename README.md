@@ -21,7 +21,7 @@ This repository contains the frontend code for the Event Manager application. It
    ```
 2. Navigate to the project directory:
    ```bash
-    cd frontend-repo
+    cd softedgelabsfrontend
    ```
 3. Install dependencies:
    ```bash
