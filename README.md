@@ -36,7 +36,7 @@ This repository contains the frontend code for the Event Manager application. It
 # API Documentation Links
 
 Refer to the backend repository's documentation for detailed API information:  
-[Backend Repository](https://github.com/Samod-Kularathne/softedgelabsbackend)
+[Backend Repository](https://github.com/Samod-Kularathne/eventmanagerbackend.git)
 
 ### Example API Endpoints:
 
