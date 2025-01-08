@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Frontend for Event Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend code for the Event Manager application. It is built using **React.js** to provide a user-friendly interface for creating, updating, and managing events.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- View events
+- Create new events
+- Update existing events
+- Delete events
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js and npm installed on your system
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Run
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Samod-Kularathne/softedgelabsfrontend.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+    cd frontend-repo
+   ```
+3. Install dependencies:
+   ```bash
+    npm install
+   ```
+4. Start the development server:
+   ```bash
+    npm start
+   ```
+5. Open your browser and go to http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# API Documentation Links
 
-### `npm run build`
+Refer to the backend repository's documentation for detailed API information:  
+[Backend Repository](https://github.com/Samod-Kularathne/softedgelabsbackend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Example API Endpoints:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **GET /api/get-events** - Fetch all events.
+- **GET /api/get-event/{id}** - Fetch details of a single event.
+- **POST /api/create-event** - Create a new event.
+- **PUT /api/events/{id}** - Update an event.
+- **DELETE /api/events/{id}** - Delete an event.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+# Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── components/        # Reusable components like Input, Button, Modal
+├── pages/             # Main pages like EventUpdatePage
+├── styles/            # SCSS files for styling
+├── App.js             # Main app component
+├── index.js           # Entry point for React
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Design Decisions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Component-Based Architecture
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The frontend uses a component-based architecture to ensure reusability and maintainability. Shared UI components like forms and buttons are abstracted into the `components/` directory.
 
-## Learn More
+### State Management
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+State is managed using React's `useState` and `useEffect` hooks. This simplifies the logic for fetching and updating event details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Styling
 
-### Code Splitting
+SCSS is used for modular and maintainable styling. Each component has its own scoped styles for better separation of concerns.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### API Interaction
 
-### Analyzing the Bundle Size
+Axios is used for handling API requests, which provides cleaner syntax and built-in error handling.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Responsive Design
 
-### Making a Progressive Web App
+The application is styled to be responsive, ensuring it works on various devices.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Notes
 
-### Advanced Configuration
+- Ensure the backend is running before testing the frontend.
+- Update the API base URL in the code if your backend is not hosted on `http://localhost:8080`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
 
-### Deployment
+- **React.js**
+- **Axios**
+- **SCSS** for styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Directory Structure
 
-### `npm run build` fails to minify
+- `src/components/` - Reusable components like Input, Button, Modal.
+- `src/pages/` - Pages like EventUpdatePage.
+- `src/styles/` - SCSS files for styling.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy using the Event Manager frontend!
